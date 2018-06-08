@@ -4,6 +4,19 @@ Website Developed using Django Framework. This is assignment submitted in course
 
 [![Build Status][travis-image]][travis-url]
 
+## Installation:
+
+Script Location: Folder where you will be extracting assignment submission.
+
+**Command:** `bash ./masterscript.sh`
+
+## Dependencies:
+
+```
+- Python version: 3.6.4
+- Django version: 1.11.6
+```
+
 ## Overview of website developed:
 
 - I have created website named 'StudyTonight' which is a Q&A Forum and online study material.
@@ -99,13 +112,6 @@ Website Developed using Django Framework. This is assignment submitted in course
 - Admin User can only be added through database
 - No additional Database script is provided (already data is populated)
 - I have used bootstrap cdn for css so it requires internet connection.
-
-## Dependencies:
-
-```
-- Python version: 3.6.4
-- Django version: 1.11.6
-```
 
 ## References:
 
