@@ -105,6 +105,13 @@ Script Location: Folder where you will be extracting assignment submission.
 | http://127.0.0.1:8000/forum/add/ | Ask Question |
 | http://127.0.0.1:8000/forum/<question_id>/answer/ | Write Answer to specific question |
 
+### Database Tables:
+
+| Table |
+| -- |
+| Question (id, title, topic, upload_time, question_content, number_of_views, user(foreign_key)) |
+| Answer (id, answer_content, upload_time, user(foreign_key), question(foreign_key)) |
+
 ## Assumptions:
 
 - Admin URL : http://127.0.0.1:8000/admin/
