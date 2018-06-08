@@ -1,0 +1,123 @@
+{% extends 'forum/base.html' %}
+
+{% block head %}
+	<title>Tutorials</title>
+	{% load staticfiles %}
+ {% endblock %}
+
+{% block active_label_tut %}active{% endblock %}
+
+{% block body %}
+<div class="container">
+	
+    <div class="container-fluid">
+    	<div class="row justify-content-md-center" >
+
+    		<div class="col-offset-2 col-8 text-center">
+      			<p style='font-size:40px;font-family: "Comic Sans MS", cursive, sans-serif; color: green;'>
+      				<i class="fa fa-book" aria-hidden="true"></i>
+      				StudyTonight Library
+      			</p>
+      			<a target="_blank" href="{% static 'forum/images/study3.jpg' %}">
+      			<img src="{% static 'forum/images/study3.jpg' %}" style="" id ="tut_image">
+      			</a>
+    		</div>
+    	</div>
+
+    </div>
+    <div class="container-fluid" id="course">
+    	<div class="row">
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">CORE JAVA →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">DBMS →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">DATA STRUCTURE →</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">C LANGUAGE →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">C++ →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">OPERATING SYSTEMS →</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">PYTHON →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">COMPUTER NETWORKS →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">JSP →</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">CSS →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">GITHUB →</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-4" style="padding: 20px;">
+    			<div class="card" style="width: 20rem;cursor:not-allowed;">
+    				<div class="card-body">
+    					<p class="text-center card-title">COMPUTER ARCHITECHTURE →</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+{% endblock %}

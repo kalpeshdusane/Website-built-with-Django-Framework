@@ -1,0 +1,38 @@
+{% extends 'forum/base.html' %}
+
+{% block head %}
+	<title>Ask a Question</title>
+	<style type="text/css">
+		.card:hover{
+			box-shadow:inset 0 0 10px #000000;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid" style="margin-top: 10px;">
+	<div class="row justify-content-md-center">
+		<!-- <div class="col-sm-12 col-md-7"> -->
+			<div class="card">
+				<div class="card-body">
+					<label class="card-title" style="text-decoration: underline;">Fill the form to ask the question:</label>
+
+					<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						{% include 'forum/form-template.html' %}
+						<div class="forum-group">
+							<div class="row justify-content-md-center">
+								<button type="Submit" class="btn btn-success" style="cursor:pointer">
+									Post the Question
+								</button>
+							</div>
+						</div>
+					</form>
+						
+					
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</div>
+{% endblock %}

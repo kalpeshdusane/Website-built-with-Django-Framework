@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+body{
+    background: white url('images/background.png');
+}
+
+.nav-heading{
+	font-family: Satisfy;
+	font-size: larger; 
+}
+
+.footer { 
+	position:fixed;
+	bottom:0;
+	width:100%;
+    display: block;
+    background-color: whitesmoke;
+
+}
+.rounded-circle{
+	max-width: 48px;
+	height: auto;
+}
+
+#forum_list a{
+	color: green;
+}
+
+#course .card:hover {
+	box-shadow: 10px 10px 5px grey;
+	background-color: springgreen;
+}
+
+#course p {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#tut_image {
+	max-width: 100%;
+	max-height: -webkit-fill-available;
+	border-radius: 30%;
+	border: 2px solid #ddd;
+}
+
+#tut_image:hover {
+    box-shadow: 0 0 3px 2px rgba(0, 140, 186, 0.8);
+}
+
+#home_image{
+	max-width: 100%;
+	max-height: -webkit-fill-available;
+	border-radius: 10px;
+	border: 2px solid #ddd;
+}
+#home_image:hover {
+    box-shadow: 0 0 3px 2px rgba(0, 140, 186, 0.8);
+}
+
+#mynav a:hover {
+	color: greenyellow;
+}

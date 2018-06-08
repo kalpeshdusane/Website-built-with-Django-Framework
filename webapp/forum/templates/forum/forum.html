@@ -1,0 +1,94 @@
+{% extends 'forum/base.html' %}
+
+{% block head %}
+	<title>Q & A Forum</title>
+	<style type="text/css">
+		.card:hover{
+			box-shadow:inset 0 0 10px #000000;
+		}
+	</style>
+	<script>
+		window.history.replaceState('Object', 'Title', '/forum/');
+	</script>
+	
+{% endblock %}
+
+{% block active_label %}active{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+    	<div class="row justify-content-md-center" >
+
+    		<div class="col-offset-2 col-8 text-center">
+      			<p style='font-size:40px;font-family: "Comic Sans MS", cursive, sans-serif; color: green;'>
+      				<i class="fa fa-slideshare" aria-hidden="true"></i>
+      				Studyroom
+      			</p>
+    		</div>
+    	</div>
+
+    </div>
+	<div class="card">
+		<a href="add/" class="btn btn-outline-success btn-lg" role="button" aria-pressed="true">Ask Question </a>
+	</div>
+		<div class="card" id = "forum_list">
+		<div class="card-body" >
+			<h4 style="text-decoration: underline;"><i>Already Asked Questions : </i></h4>
+		
+	
+			{% for post in all_questions %}
+			<div class="card border-success mb-3" >
+				<div class="card-body">
+					<div class="float-right" style="color: green;">
+	  					<h3 class="text-center">
+	  						{{post.answer_set.count}}
+	  					</h3>
+	  					<p class="darkest-grey" style='font-family: "Comic Sans MS", cursive, sans-serif;'>
+	  					<small>
+	  						{% if post.answer_set.count > 1 %}
+	  							Answers
+	  						{% else %}
+	  							Answer
+	  						{% endif %}
+	  					</small>
+	  					</p>
+	  				</div>
+					<div class="float-left">
+						{% load staticfiles %}
+						<img src="{% static 'forum/images/default-profile.png' %}"  class="rounded-circle img-thumbnail">
+					</div>
+					<div style="margin-left:75px;">						
+					
+					<h4 class="card-title">
+						<!-- <a href="/forum/{{post.id}}"> -->
+						<a href="{% url 'forum:question_detail' post.id %}">
+							{{post.title}}
+						</a>
+					</h4>
+					<p class="darkest-grey">
+  					<small>
+  						<span class="dark-grey">{{ post.upload_time }}</span>&nbsp;&nbsp;&nbsp;by&nbsp;
+  						<span>
+  							<i class="fa fa-user" aria-hidden="true"></i>  
+  							<label>
+  								<strong>{{post.user}}</strong>
+  							</label>&nbsp;&nbsp;&nbsp;
+  						</span>
+  						<span title="number of views">
+  							<i class="fa fa-eye" aria-hidden="true"></i>
+  							{{post.number_of_views}}
+  						</span>					
+  					</small>
+  					</p>
+  					
+  					<p><span class="badge badge-success">{{post.topic}}</span></p>
+					
+					</div>
+					
+					
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		</div>
+{% endblock %}

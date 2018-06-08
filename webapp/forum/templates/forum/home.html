@@ -1,0 +1,41 @@
+{% extends 'forum/base.html' %}
+
+{% block head %}
+	<title>Home</title>
+  <script>
+    window.history.replaceState('Object', 'Title', '/');
+  </script>
+{% endblock %}
+
+{% block body %}
+{% load staticfiles %}
+<div class="container">
+    <div class="container-fluid" style="padding: 30px;">
+    	<div class="row justify-content-md-center" style="margin-top: 100px;margin-bottom: 100px;">
+    		<div class="col-4">
+    		<a target="_blank" href="{% static 'forum/images/study5.jpg' %}">
+      			<img src="{% static 'forum/images/study5.jpg' %}" style="" id ="home_image">
+      		</a>
+      		</div>
+    		<div class="col-offset-2 col-8 text-center">
+      			<p style='font-size:40px;font-family: "Comic Sans MS", cursive, sans-serif; color: green;'>Education simplified</p><p>
+      			</p><p style="font-size:16px;">Our mission is to empower young Students to be the inventors and creators.</p>
+      			<br><p> <a href="{% url 'forum:tutorial' %}" class="btn btn-success">Start Learning Today →</a> </p>
+    		</div>
+    	</div>
+    	<div class="row justify-content-md-center" style="margin-top: 100px;margin-bottom: 100px;">
+    		<div class="col-offset-2 col-8 text-center">
+      			<p style='font-size:40px;font-family: "Comic Sans MS", cursive, sans-serif; color: green;'>Studyroom</p><p>
+      			</p><p style="font-size:16px;">We're a community of Students sharing knowledge by asking Questions and answering them in our space.</p>
+      			<br><p> <a href="{% url 'forum:forum_list' %}" class="btn btn-success">Start Studyroom Learning Today →</a> </p>
+    		</div>
+    		<div class="col-4">
+    		<a target="_blank" href="{% static 'forum/images/study6.jpg' %}">
+      			<img src="{% static 'forum/images/study6.jpg' %}" style="" id ="home_image">
+      		</a>
+      		</div>
+    	</div>
+
+    </div>
+</div>
+{% endblock %}

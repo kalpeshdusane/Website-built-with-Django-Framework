@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+
+{% block head %}
+	<title>Log Out</title>
+{% endblock %}
+
+{% block body %}
+			<div class="card" id="login-dp" >
+				<div class="card-header text-center" >
+					<div class="card-title" ><h4>Signed Out</h4></div>
+				</div>
+				<div class="card-block">					
+					<div class="input-group" style="margin-bottom: 25px ; padding: 25px 25px 0;">
+						<span class="input-group-addon" id="basic-addon1">You are now signed out.</span>
+					</div>
+					<div class="bottom text-center">
+						<a href="{% url 'accounts:login_user' %}"><b>Click here</b></a> to sign in again.
+					</div>
+				</div>
+			</div> 
+{% endblock %}
+
+

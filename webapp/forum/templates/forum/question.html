@@ -1,0 +1,92 @@
+{% extends 'forum/base.html' %}
+
+{% block head %}
+	<title>Question</title>
+	<style type="text/css">
+		.card:hover{
+			box-shadow:inset 0 0 10px #000000;
+		}
+	</style>
+	<script>
+		window.history.replaceState('Object', 'Title', '/forum/{{question.id}}/');
+	</script>
+{% endblock %}
+
+{% block body %}
+	
+	<div class="card" id = "forum_list">
+		<div class="card-body" >
+			<div class="card border-success mb-3" >
+				<div class="card-body">
+					<div class="float-left">
+						{% load staticfiles %}
+						<img src="{% static 'forum/images/default-profile.png' %}"  class="rounded-circle img-thumbnail">
+					</div>
+					<div style="margin-left:75px;">	
+					<h3 class="varela card-title" style='font-family: "Comic Sans MS", cursive, sans-serif;'>{{question.title}}</h3>
+					<p class="varela darkest-grey">
+						<small>
+							<span class="dark-grey">{{question.upload_time}}</span>&nbsp;&nbsp;&nbsp;by&nbsp;
+	  						<span>
+	  							<i class="fa fa-user" aria-hidden="true"></i>  
+	  							<label>
+	  								<strong>{{question.user}}</strong>
+	  							</label>&nbsp;&nbsp;&nbsp;
+	  						</span>
+	  						<span>
+	  							<i class="fa fa-eye" aria-hidden="true"></i>
+	  							{{question.number_of_views}}
+	  						</span>
+						</small>
+					</p>
+
+					<div style="font-family:Tahoma, Geneva, sans-serif">
+						{{question.question_content|safe|linebreaks}}
+					</div>
+					<p><span class="badge badge-success">{{question.topic}}</span></p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- <h4> Answers : </h4> -->
+			
+
+			<div class="card border-success mb-3">
+			  <div class="card-header bg-transparent border-success" style='font-family: "Comic Sans MS", cursive, sans-serif;'>Answers :</div>
+			  <div class="card-body">
+			  	{% if question.answer_set.all %}
+				  	{% for answer in question.answer_set.all %}
+				  		<div class="card border-success mb-3">
+				  			<div class="card-body">
+				  				<div class="float-left">
+									{% load staticfiles %}
+									<img src="{% static 'forum/images/default-profile.png' %}"  class="rounded-circle img-thumbnail">
+								</div>
+								<div style="margin-left:75px;">	
+				  				<span>
+		  							<i class="fa fa-user" aria-hidden="true"></i>  
+		  							<label>
+		  								<strong>{{answer.user}}</strong>
+		  							</label>
+		  						</span>	<br>			  			
+								<span style="font-family:Tahoma, Geneva, sans-serif" class="text-secondary">{{answer.answer_content|safe|linebreaks}} </span> <br>
+								<small>{{answer.upload_time}}</small>
+								</div>
+							</div>
+				  		</div>
+						
+					{% endfor %}
+				{% else %}
+					<p align="center">No Answer given yet.</p>
+				{% endif %}
+			  </div>
+			  <div class="card-footer bg-transparent border-success ">
+			  	<div class="row justify-content-md-center">
+			  		<a href="answer/" class="btn btn-outline-success btn-lg" role="button" aria-pressed="true">Answer the Question</a>
+			  	</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
