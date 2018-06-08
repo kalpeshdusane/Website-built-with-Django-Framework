@@ -2,6 +2,8 @@
 
 Website Developed using Django Framework. This is assignment submitted in course CS 699 Software lab.
 
+[![Build Status][travis-image]][travis-url]
+
 ## Overview of website developed:
 
 - I have created website named 'StudyTonight' which is a Q&A Forum and online study material.
@@ -22,7 +24,7 @@ Website Developed using Django Framework. This is assignment submitted in course
 >**Note:** there is no constraint on password.
 - All normal users can be added through webpage but admin user can only be created through Database.
 
-### Main functionality Implimented
+### Main functionality Implimented:
 ```
   1] Login, Register User Interface - Any user can register and login into website
 		Functions Implemented :
@@ -73,5 +75,46 @@ Website Developed using Django Framework. This is assignment submitted in course
       - You can explore a question further by clinking on question title. It will also show the detailed question and answers posted by user.
   4. ***Logout*** - expire your session.
  
+### URLs:
+
+>*No need* to follow all urls manually. Once you are on home link, you can choose to go to any of below using flow of website except admin url.
+
+| URL | Usage |
+| -- | -- |
+| http://127.0.0.1:8000/ | Home link |
+| http://127.0.0.1:8000/account/login/ | Login link |
+| http://127.0.0.1:8000/account/register/ | New User Register link |
+| http://127.0.0.1:8000/account/logout/ | Logout link |
+| http://127.0.0.1:8000/tutorial/ | Tutorials Home page |
+| http://127.0.0.1:8000/forum/ | Q&A Forum Page |
+| http://127.0.0.1:8000/admin/ | Admin wepage |
+| http://127.0.0.1:8000/forum/<question_id>/ | Details of specific page |
+| http://127.0.0.1:8000/forum/add/ | Ask Question |
+| http://127.0.0.1:8000/forum/<question_id>/answer/ | Write Answer to specific question |
+
+## Assumptions:
+
+- Admin URL : http://127.0.0.1:8000/admin/
+- Home URL : http://127.0.0.1:8000/
+- Admin User can only be added through database
+- No additional Database script is provided (already data is populated)
+- I have used bootstrap cdn for css so it requires internet connection.
+
+## Dependencies:
+
+```
+- Python version: 3.6.4
+- Django version: 1.11.6
+```
+
+## References:
+
+- https://thenewboston.com/page.php?pid=2951
+- https://pythonprogramming.net/search/?q=django
+- https://docs.djangoproject.com/en/1.11/intro/tutorial01/
+
+<!-- Markdown link & img dfn's -->
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 
 
